@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "transient_prompt": {
     "template": "{{ .Shell }} ",
-    "foreground": "#FEF5ED",
+    "foreground": "#3d3d3d",
     "background": "transparent"
   },
   "console_title_template": "{{ .Folder }}",
@@ -13,24 +13,6 @@
     "notice": false
   },
   "blocks": [
-    {
-      "type": "rprompt",
-      "alignment": "right",
-      "overflow": "hide",
-      "enable_cursor_positioning": "true",
-      "segments": [
-        {
-          "properties": {
-            "style": "dallas",
-            "threshold": 0
-          },
-          "template": " {{ .FormattedMs }}s <#ffffff>\ue601</>",
-          "foreground": "#00c7fc",
-          "type": "executiontime",
-          "style": "powerline"
-        }
-      ]
-    },
     {
       "type": "prompt",
       "alignment": "left",
@@ -62,6 +44,35 @@
           "foreground": "#00c7fc",
           "type": "git",
           "style": "powerline"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "overflow": "hide",
+      "enable_cursor_positioning": "true",
+      "segments": [
+        {
+          "properties": {
+            "style": "dallas",
+            "threshold": 0
+          },
+          "template": " {{ .FormattedMs }}s <#ffffff>\ue601</> ",
+          "foreground": "#00c7fc",
+          "type": "executiontime",
+          "style": "powerline"
+        },
+        {
+          "type": "spotify",
+          "style": "powerline",
+          "template": "{{ .Icon }}{{ if ne .Status \"stopped\" }}{{ .Artist }} - {{ .Track }}{{ end }}",
+          "foreground": "#1db954",
+          "properties": {
+            "playing_icon": "\ueb2c ",
+            "paused_icon": "\uead1 ",
+            "stopped_icon": "\uead7 "
+          }
         }
       ]
     },
