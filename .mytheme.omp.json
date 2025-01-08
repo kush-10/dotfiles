@@ -62,17 +62,6 @@
           "foreground": "#00c7fc",
           "type": "executiontime",
           "style": "powerline"
-        },
-        {
-          "type": "spotify",
-          "style": "powerline",
-          "template": "{{ .Icon }}{{ if ne .Status \"stopped\" }}{{ .Artist }} - {{ .Track }}{{ end }}",
-          "foreground": "#1db954",
-          "properties": {
-            "playing_icon": "\ueb2c ",
-            "paused_icon": "\uead1 ",
-            "stopped_icon": "\uead7 "
-          }
         }
       ]
     },
