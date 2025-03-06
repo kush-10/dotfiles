@@ -105,8 +105,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-source /opt/local/share/fzf/shell/key-bindings.zsh
-
 eval "$(oh-my-posh init zsh --config /Users/kushal/.mytheme.omp.json)"
 
 source <(fzf --zsh)
