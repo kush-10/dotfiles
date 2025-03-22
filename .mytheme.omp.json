@@ -40,9 +40,15 @@
           "properties": {
             "branch_icon": "\ue725 "
           },
-          "template": "({{ .HEAD }})",
+          "template": "({{ .HEAD }}) ",
           "foreground": "#00c7fc",
           "type": "git",
+          "style": "powerline"
+        },
+        {
+          "template": "( {{ .Venv }}) ",
+          "foreground": "#00c7fc",
+          "type": "python",
           "style": "powerline"
         }
       ]
