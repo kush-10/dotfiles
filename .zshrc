@@ -25,7 +25,7 @@ ZSH_THEME=""
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
@@ -101,10 +101,21 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="code ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-eval "$(oh-my-posh init zsh --config /Users/kushal/.mytheme.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/.mytheme.omp.json)"
 
 source <(fzf --zsh)
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/kush/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+export PATH="/Library/TeX/texbin:$PATH"
+
+#Risc0
+export PATH="$PATH:/Users/kush/.risc0/bin"
