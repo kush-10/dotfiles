@@ -28,10 +28,10 @@ remove_if_exists "$HOME/.mytheme.omp.json"
 # Create symlinks pointing to files in this repo
 # Adjust filenames here if your repo uses different names
 #
-echo "🔗 Creating symlink: ~/.zshrc → $REPO/zshrc"
+echo "🔗 Creating symlink: ~/.zshrc → $REPO/.zshrc"
 ln -s "$REPO/zshrc" "$HOME/.zshrc"
 
-echo "🔗 Creating symlink: ~/.mytheme.omp.json → $REPO/mytheme.omp.json"
+echo "🔗 Creating symlink: ~/.mytheme.omp.json → $REPO/.mytheme.omp.json"
 ln -s "$REPO/mytheme.omp.json" "$HOME/.mytheme.omp.json"
 
 echo
