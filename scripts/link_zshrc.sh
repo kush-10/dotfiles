@@ -25,8 +25,15 @@ if [ -f "$dotfiles_dir/.mytheme.omp.json" ]; then
   ln -snf "$dotfiles_dir/.mytheme.omp.json" "$HOME/.mytheme.omp.json"
 fi
 
-if [ -f "$dotfiles_dir/.greeting" ]; then
-  ln -snf "$dotfiles_dir/.greeting" "$HOME/.greeting"
+if [ -f "$dotfiles_dir/tmux-sessionizer" ]; then
+  mkdir -p "$HOME/.local/bin"
+  cp -f "$dotfiles_dir/tmux-sessionizer" "$HOME/.local/bin/tmux-sessionizer"
+  chmod +x "$HOME/.local/bin/tmux-sessionizer"
+fi
+
+if [ -f "$dotfiles_dir/tmux-sessionizer.conf" ]; then
+  mkdir -p "$HOME/.config/tmux-sessionizer"
+  cp -f "$dotfiles_dir/tmux-sessionizer.conf" "$HOME/.config/tmux-sessionizer/tmux-sessionizer.conf"
 fi
 
 echo "Linked $src -> $HOME/.zshrc"
