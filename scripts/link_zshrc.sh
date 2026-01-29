@@ -31,6 +31,11 @@ if [ -f "$dotfiles_dir/tmux-sessionizer" ]; then
   chmod +x "$HOME/.local/bin/tmux-sessionizer"
 fi
 
+if [ -f "$dotfiles_dir/ducky.json" ]; then
+  mkdir -p "$HOME/.config/karabiner/assets/complex_modifications/"
+  cp -f "$dotfiles_dir/ducky.json" "$HOME/.config/karabiner/assets/complex_modifications/ducky.json"
+fi
+
 if [ -f "$dotfiles_dir/tmux-sessionizer.conf" ]; then
   mkdir -p "$HOME/.config/tmux-sessionizer"
   cp -f "$dotfiles_dir/tmux-sessionizer.conf" "$HOME/.config/tmux-sessionizer/tmux-sessionizer.conf"
