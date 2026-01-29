@@ -33,12 +33,17 @@ fi
 
 if [ -f "$dotfiles_dir/ducky.json" ]; then
   mkdir -p "$HOME/.config/karabiner/assets/complex_modifications/"
-  cp -f "$dotfiles_dir/ducky.json" "$HOME/.config/karabiner/assets/complex_modifications/ducky.json"
+  ln -snf "$dotfiles_dir/ducky.json" "$HOME/.config/karabiner/assets/complex_modifications/ducky.json"
 fi
 
 if [ -f "$dotfiles_dir/tmux-sessionizer.conf" ]; then
   mkdir -p "$HOME/.config/tmux-sessionizer"
-  cp -f "$dotfiles_dir/tmux-sessionizer.conf" "$HOME/.config/tmux-sessionizer/tmux-sessionizer.conf"
+  ln -snf "$dotfiles_dir/tmux-sessionizer.conf" "$HOME/.config/tmux-sessionizer/tmux-sessionizer.conf"
+fi
+
+if [ -f "$dotfiles_dir/ghostty" ]; then
+  mkdir -p "$HOME/.config/ghostty"
+  ln -snf "$dotfiles_dir/ghostty.config" "$HOME/.config/ghostty/config"
 fi
 
 echo "Linked $src -> $HOME/.zshrc"
