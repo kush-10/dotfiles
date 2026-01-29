@@ -46,4 +46,4 @@ if [ -f "$dotfiles_dir/ghostty" ]; then
   ln -snf "$dotfiles_dir/ghostty.config" "$HOME/.config/ghostty/config"
 fi
 
-echo "Linked $src -> $HOME/.zshrc"
+echo "Linked all files to dirs"
