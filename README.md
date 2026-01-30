@@ -8,6 +8,7 @@
 - `.tmux.conf`: tmux configuration.
 - `.zshrc.mac`: zsh shell configuration for macOS.
 - `.zshrc.linux`: zsh shell configuration for Linux.
+- `hammerspoon-init.lua`: Hammerspoon configuration.
 - `ghostty.config`: Ghostty terminal configuration (symlink to `~/.config/ghostty/config`).
 - `nvim/`: Neovim configuration.
 - `tmux-sessionizer`: tmux sessionizer script (copied to `~/.local/bin`) [Orginal File](https://github.com/ThePrimeagen/tmux-sessionizer).
@@ -16,6 +17,12 @@
 
 ## Scripts:
 
-- `scripts/link_zshrc.sh`: Symlink the correct `.zshrc`, shared files, and copy tmux-sessionizer files into place.
+- `scripts/ln_cp_files.sh`: Symlink the correct `.zshrc`, shared files, and copy tmux-sessionizer files into place.
 - `scripts/install_zsh_tools.sh`: Install Oh My Zsh, zsh-autosuggestions, fzf, and oh-my-posh.
-- `scripts/README.md`: Notes and manual linking commands.
+
+## MacOS Apps:
+
+- _Ghostty.app_ - Terminal
+- _Karabiner_ - Keyboard Mapping
+- _Alfred_ - Better Spolight Search
+- _HammerSpoon_ - Scripting

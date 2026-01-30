@@ -1,174 +1,189 @@
 {
-  "title": "Ducky One 3 SF – UK Layout Fixes",
-  "rules": [
-    {
-      "description": "Move tilde to proper key",
-      "manipulators": [
-        {
-          "type": "basic",
-          "conditions": [
+    "title": "Ducky One 3 SF – UK Layout Fixes",
+    "rules": [{
+        "description": "Caps Lock -> Hyper (Ctrl+Alt+Cmd+Shift) when held; Escape when tapped",
+        "manipulators": [
             {
-              "type": "device_if",
-              "identifiers": [
-                { "vendor_id": 12851, "product_id": 21265 }
-              ]
+                "type": "basic",
+                "from": { "key_code": "caps_lock", "modifiers": { "optional": ["any"] } },
+                "to": [
+                    {
+                        "key_code": "left_shift",
+                        "modifiers": ["left_control", "left_option", "left_command"]
+                    }
+                ],
+                "to_if_alone": [{ "key_code": "escape" }]
             }
-          ],
-          "from": {
-            "key_code": "backslash",
-            "modifiers": {
-              "mandatory": ["shift"],
-              "optional": ["caps_lock"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "grave_accent_and_tilde",
-              "modifiers": ["left_shift"]
-            }
-          ]
-        }
-      ]
+        ]
     },
     {
-      "description": "Swap @ and double quote",
-      "manipulators": [
-        {
-          "type": "basic",
-          "conditions": [
+        "description": "Move tilde to proper key",
+        "manipulators": [
             {
-              "type": "device_if",
-              "identifiers": [
-                { "vendor_id": 12851, "product_id": 21265 }
-              ]
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "device_if",
+                        "identifiers": [
+                            { "vendor_id": 12851, "product_id": 21265 }
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "backslash",
+                    "modifiers": {
+                        "mandatory": ["shift"],
+                        "optional": ["caps_lock"]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "grave_accent_and_tilde",
+                        "modifiers": ["left_shift"]
+                    }
+                ]
             }
-          ],
-          "from": {
-            "key_code": "2",
-            "modifiers": {
-              "mandatory": ["shift"],
-              "optional": ["caps_lock"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "quote",
-              "modifiers": ["left_shift"]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "conditions": [
-            {
-              "type": "device_if",
-              "identifiers": [
-                { "vendor_id": 12851, "product_id": 21265 }
-              ]
-            }
-          ],
-          "from": {
-            "key_code": "quote",
-            "modifiers": {
-              "mandatory": ["shift"],
-              "optional": ["caps_lock"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "2",
-              "modifiers": ["left_shift"]
-            }
-          ]
-        }
-      ]
+        ]
     },
     {
-      "description": "Move backslash from non-US key",
-      "manipulators": [
-        {
-          "type": "basic",
-          "conditions": [
+        "description": "Swap @ and double quote",
+        "manipulators": [
             {
-              "type": "device_if",
-              "identifiers": [
-                { "vendor_id": 12851, "product_id": 21265 }
-              ]
-            }
-          ],
-          "from": {
-            "key_code": "non_us_backslash",
-            "modifiers": {
-              "mandatory": ["shift"],
-              "optional": ["caps_lock"]
-            }
-          },
-          "to": [
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "device_if",
+                        "identifiers": [
+                            { "vendor_id": 12851, "product_id": 21265 }
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "2",
+                    "modifiers": {
+                        "mandatory": ["shift"],
+                        "optional": ["caps_lock"]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "quote",
+                        "modifiers": ["left_shift"]
+                    }
+                ]
+            },
             {
-              "key_code": "backslash",
-              "modifiers": ["shift"]
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "device_if",
+                        "identifiers": [
+                            { "vendor_id": 12851, "product_id": 21265 }
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "quote",
+                    "modifiers": {
+                        "mandatory": ["shift"],
+                        "optional": ["caps_lock"]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "2",
+                        "modifiers": ["left_shift"]
+                    }
+                ]
             }
-          ]
-        }
-      ]
+        ]
     },
     {
-      "description": "Map hash (#) to backslash key via Option+3",
-      "manipulators": [
-        {
-          "type": "basic",
-          "conditions": [
+        "description": "Move backslash from non-US key",
+        "manipulators": [
             {
-              "type": "device_if",
-              "identifiers": [
-                { "vendor_id": 12851, "product_id": 21265 }
-              ]
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "device_if",
+                        "identifiers": [
+                            { "vendor_id": 12851, "product_id": 21265 }
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "non_us_backslash",
+                    "modifiers": {
+                        "mandatory": ["shift"],
+                        "optional": ["caps_lock"]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "backslash",
+                        "modifiers": ["shift"]
+                    }
+                ]
             }
-          ],
-          "from": {
-            "key_code": "backslash",
-            "modifiers": {
-              "mandatory": [],
-              "optional": ["caps_lock"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "3",
-              "modifiers": ["right_option"]
-            }
-          ]
-        }
-      ]
+        ]
     },
     {
-      "description": "Move pipe to proper key",
-      "manipulators": [
-        {
-          "type": "basic",
-          "conditions": [
+        "description": "Map hash (#) to backslash key via Option+3",
+        "manipulators": [
             {
-              "type": "device_if",
-              "identifiers": [
-                { "vendor_id": 12851, "product_id": 21265 }
-              ]
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "device_if",
+                        "identifiers": [
+                            { "vendor_id": 12851, "product_id": 21265 }
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "backslash",
+                    "modifiers": {
+                        "mandatory": [],
+                        "optional": ["caps_lock"]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "3",
+                        "modifiers": ["right_option"]
+                    }
+                ]
             }
-          ],
-          "from": {
-            "key_code": "non_us_backslash",
-            "modifiers": {
-              "mandatory": [],
-              "optional": ["caps_lock"]
-            }
-          },
-          "to": [
+        ]
+    },
+    {
+        "description": "Move pipe to proper key",
+        "manipulators": [
             {
-              "key_code": "backslash"
+                "type": "basic",
+                "conditions": [
+                    {
+                        "type": "device_if",
+                        "identifiers": [
+                            { "vendor_id": 12851, "product_id": 21265 }
+                        ]
+                    }
+                ],
+                "from": {
+                    "key_code": "non_us_backslash",
+                    "modifiers": {
+                        "mandatory": [],
+                        "optional": ["caps_lock"]
+                    }
+                },
+                "to": [
+                    {
+                        "key_code": "backslash"
+                    }
+                ]
             }
-          ]
-        }
-      ]
+        ]
     }
-  ]
+    ]
 }
 

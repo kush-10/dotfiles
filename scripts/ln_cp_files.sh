@@ -46,4 +46,11 @@ if [ -f "$dotfiles_dir/ghostty" ]; then
   ln -snf "$dotfiles_dir/ghostty.config" "$HOME/.config/ghostty/config"
 fi
 
+
+if [ -f "$dotfiles_dir/hammerspoon-init.lua" ]; then
+  mkdir -p "$HOME/.hammerspoon/"
+  ln -snf "$dotfiles_dir/hammerspoon-init.lua" "$HOME/.hammerspoon/init.lua"
+fi
+
+
 echo "Linked all files to dirs"
