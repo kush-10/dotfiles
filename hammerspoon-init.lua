@@ -3,10 +3,11 @@ local hyper = {"ctrl", "alt", "cmd", "shift"}
 
 -- Map keys -> apps
 local app = {
-  t = "Ghostty",
-  s = "Safari",
-  f = "Finder",
-  m = "Spotify",
+  t = "Ghostty", -- Terminal
+  w = "Safari", -- Web Browser
+  f = "Finder", -- File Explorer
+  m = "Spotify", -- Music
+  e = "Mail", -- Email 
 }
 
 -- Launch or focus app
