@@ -170,6 +170,9 @@ create_default_layout() {
     # Window 2: terminal
     tmux new-window -t "${session}" -n "term" -c "${dir}"
 
+    # Window 3: opencode ai
+    tmux new-window -t "${session}" -n "opencode" -c "${dir}" "opencode ."
+    
     # Focus back to nvim window
     tmux select-window -t "${session}:1"
 }

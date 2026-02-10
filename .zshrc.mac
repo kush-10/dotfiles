@@ -149,3 +149,6 @@ if [ -d "$HOME/.docker/completions" ]; then
   autoload -Uz compinit
   compinit
 fi
+
+# opencode
+export PATH=/Users/kush/.opencode/bin:$PATH
