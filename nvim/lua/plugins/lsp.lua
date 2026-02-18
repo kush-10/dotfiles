@@ -4,6 +4,7 @@ return {
     "mason-org/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
     "hrsh7th/cmp-nvim-lsp",
+    "SmiteshP/nvim-navic",
   },
   config = function()
     require("mason").setup()
@@ -19,6 +20,8 @@ return {
     })
 
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
+    local navic = require("nvim-navic")
+    navic.setup({})
 
     local servers = {
       "gopls",
@@ -31,6 +34,11 @@ return {
     for _, server in ipairs(servers) do
       vim.lsp.config(server, {
         capabilities = capabilities,
+        on_attach = function(client, bufnr)
+          if client.server_capabilities.documentSymbolProvider then
+            navic.attach(client, bufnr)
+          end
+        end,
       })
     end
 
