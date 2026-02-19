@@ -6,6 +6,9 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' 
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 vim.keymap.set('n', '<C-p>', builtin.git_files)
 
+vim.keymap.set('n', '<C-s>', ':w<CR>')
+vim.keymap.set('i', '<C-s>', '<Esc>:w<CR>a')
+
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
