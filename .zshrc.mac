@@ -152,3 +152,11 @@ fi
 
 # opencode
 export PATH=/Users/kush/.opencode/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/Users/kush/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
