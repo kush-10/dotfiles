@@ -46,4 +46,8 @@ if [ -f "$dotfiles_dir/ghostty" ]; then
   ln -snf "$dotfiles_dir/ghostty.config" "$HOME/.config/ghostty/config"
 fi
 
+if [ -f "$dotfiles_dir/.aerospace.toml" ]; then
+  ln -snf "$dotfiles_dir/.aerospace.toml" "$HOME/.aerospace.toml"
+fi
+
 echo "Linked all files to dirs"
