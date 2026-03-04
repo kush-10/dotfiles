@@ -31,9 +31,9 @@ if [ -f "$dotfiles_dir/tmux-sessionizer" ]; then
   chmod +x "$HOME/.local/bin/tmux-sessionizer"
 fi
 
-if [ -f "$dotfiles_dir/ducky.json" ]; then
+if [ -f "$dotfiles_dir/karabiner.json" ]; then
   mkdir -p "$HOME/.config/karabiner/assets/complex_modifications/"
-  ln -snf "$dotfiles_dir/ducky.json" "$HOME/.config/karabiner/assets/complex_modifications/ducky.json"
+  ln -snf "$dotfiles_dir/karabiner.json" "$HOME/.config/karabiner/assets/complex_modifications/karabiner.json"
 fi
 
 if [ -f "$dotfiles_dir/tmux-sessionizer.conf" ]; then

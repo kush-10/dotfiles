@@ -12,7 +12,7 @@
 - `nvim/`: Neovim configuration.
 - `tmux-sessionizer`: tmux sessionizer script (copied to `~/.local/bin`) [Orginal File](https://github.com/ThePrimeagen/tmux-sessionizer).
 - `tmux-sessionizer.conf`: tmux sessionizer config (copied to `~/.config/tmux-sessionizer/`).
-- `ducky.json`: karabiner elements json for a ducky 1-3 sf
+- `karabiner.json`: Karabiner-Elements complex modifications JSON (includes UK layout fixes).
 
 ## Scripts:
 

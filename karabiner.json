@@ -1,5 +1,5 @@
 {
-    "title": "Ducky One 3 SF – UK Layout Fixes",
+    "title": "Karabiner - UK Layout Fixes",
     "rules": [{
         "description": "Caps Lock -> Option when held; Escape when tapped",
         "manipulators": [
@@ -122,35 +122,6 @@
                     {
                         "key_code": "backslash",
                         "modifiers": ["shift"]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "description": "Map hash (#) to backslash key via Option+3",
-        "manipulators": [
-            {
-                "type": "basic",
-                "conditions": [
-                    {
-                        "type": "device_if",
-                        "identifiers": [
-                            { "vendor_id": 12851, "product_id": 21265 }
-                        ]
-                    }
-                ],
-                "from": {
-                    "key_code": "backslash",
-                    "modifiers": {
-                        "mandatory": [],
-                        "optional": ["caps_lock"]
-                    }
-                },
-                "to": [
-                    {
-                        "key_code": "3",
-                        "modifiers": ["right_option"]
                     }
                 ]
             }
