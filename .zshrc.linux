@@ -107,6 +107,9 @@ alias vi="nvim"
 # Ensure local bin paths are available.
 export PATH="$HOME/.local/bin:$PATH"
 
+# nvm and npm expect to manage their own prefix paths.
+unset NPM_CONFIG_PREFIX
+
 # oh-my-posh prompt
 if command -v oh-my-posh >/dev/null 2>&1; then
   eval "$(oh-my-posh init zsh --config $HOME/.mytheme.omp.json)"
@@ -121,3 +124,10 @@ elif command -v fzf >/dev/null 2>&1; then
   fi
 fi
 
+export NVM_DIR="$HOME/.nvm"
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+  . "$NVM_DIR/nvm.sh"
+fi
+if [ -s "$NVM_DIR/bash_completion" ]; then
+  . "$NVM_DIR/bash_completion"
+fi
